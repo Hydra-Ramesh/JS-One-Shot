@@ -4,6 +4,8 @@ class University{
         this.name = name;
         this.students = [];
     }
+
+    // Student Management
     addStudent(student){
         this.students.push(student);
         console.log("Student added successfully!");
@@ -37,6 +39,7 @@ class University{
         Student.totalStudents--;
 
     }
+    // We have to Update this function later based on {roll, newName, newAge, NewGender, newDepartment}
     updateStudent(roll, newDepartment){
         const student=this.students.find(s=>s.roll===roll);
         if(!student){
@@ -54,18 +57,34 @@ class University{
         }
         console.log(list);
     }
+
+
+
+    // Teacher Management
+
+    //1. Add teacher
+    //2. View all teachers
+    //3. Search teacher by employeeId
+    //4. Delete teacher by employeeId
+
+
+
+    // Course Management
+
+    //1. Add course
+    //2. View all courses
+    //3. Search course by id
+    //4. Delete course by id
+
+    // Course Operations
+
+    //1. Assign teacher to course
+    //2. Enroll student in course
+    //3. Remove student from course
+    //4. View enrolled students in course
+
+
+
 };
 
-const u1=new University("ABC University");
-const s1= new Student(1, "Ramesh Das", 22, "Male", 101, "Computer Science");
-const s2= new Student(2, "Suresh Kumar", 23, "Male", 102, "Mechanical Engineering");
-u1.addStudent(s1);
-u1.addStudent(s2);
-u1.viewStudents();
-u1.searchStudent(101);
-u1.updateStudent(101, "Information Technology");
-u1.viewStudents();
-u1.deleteStudent(102);
-u1.viewStudents();
-u1.studentByDepartment("Information Technology");
-Student.showTotalStudents();
+
